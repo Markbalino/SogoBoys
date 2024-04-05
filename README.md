@@ -1,5 +1,4 @@
-# Sogo Boost
-### (kapag mahal mo i pa rankup mo)  
+# Sogo Boost ### (kapag mahal mo i pa rankup mo)  
 
 **Information about game-boosting services**  
 
