@@ -1,4 +1,132 @@
-{% extends "base.html" %} {% block title %} Home Page {% endblock %}
+{% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-<p> hinde ito homepage </p>
-{% endblock %}
+<style>
+
+.carousel-item {
+    height: 50rem;
+    background: white;
+    color: white;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+
+.p-tag{
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.5)
+}
+.img{
+    background-image: radial-gradient(circle at center, black, transparent);
+}
+.gradient-text {
+    font-width: 700;
+    font-size: 100px;
+    background-image: linear-gradient(to right, red, yellow);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.btn{
+    width: 15rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.btn:hover{
+    transition: 0.5s;
+    transform: translateY(-10px);
+}
+.box-shadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.text{
+    top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+</style>
+
+
+<div class='text position-absolute text-center z-3 container-fluid'>
+    <h2 class='gradient-text'> Welcome to Sogo Boost</h2>
+    <h5 class='text-white'>Level up your game with our high quality boosting services.</h5>
+    <a href='/about' class='btn btn-danger rounded-5 mt-5'> Check about us</a>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+
+    <div class="carousel-inner overflow-hidden">
+
+        <div class="carousel-item img active" data-bs-interval="2000">
+            <img class='d-block w-100 position-absolute img'  src="{% static 'img/img1.jpg' %} " width="100%" alt="Image 1">
+            <div class='text-center p-tag w-100 container-fluid position-absolute bottom-0 p-5'>
+                <p>Mobile Legends: Bang Bang is a mobile multiplayer online battle arena game developed and published by Moonton, a subsidiary of ByteDance. Released in 2016, the game grew in popularity; most prominently in Southeast Asia.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item img" data-bs-interval="3000">
+            <img class='d-block w-100 position-absolute img'  src="{% static 'img/img2.jpg' %} " width="100%" alt="Image 2">
+
+            <div class='text-center p-tag w-100 container-fluid position-absolute bottom-0 p-5'>
+                <p>League of Legends: Wild Rift is a multiplayer online battle arena mobile game developed and published by Riot Games for Android and iOS. The game is a modified version of the PC game League of Legends.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item img" data-bs-interval="3000">
+            <img class='d-block w-100 position-absolute img'  src="{% static 'img/img3.jpg' %} " width="100%" alt="Image 3">
+
+            <div class='text-center p-tag w-100 container-fluid position-absolute bottom-0 p-5'>
+                <p>League of Legends, commonly referred to as League, is a 2009 multiplayer online battle arena video game developed and published by Riot Games. Inspired by Defense of the Ancients, a custom map for Warcraft III, Riot's founders sought to develop a stand-alone game in the same genre.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item img" data-bs-interval="3000">
+
+            <img class='d-block w-100 position-absolute img'  src="{% static 'img/img4.jpg' %} " width="100%" alt="Image 3">
+            
+            <div class='text-center p-tag w-100 container-fluid position-absolute bottom-0 p-5'>
+                <p>Valorant is a free-to-play first-person tactical hero shooter developed and published by Riot Games, for Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by a release on June 2, 2020.</p>
+            </div>
+
+        </div>
+
+        <div class="carousel-item img" data-bs-interval="2000">
+            <img class='d-block w-100 position-absolute img'  src="{% static 'img/img5.jpg' %} " width="100%" alt="Image 3">
+
+            <div class='text-center p-tag w-100 container-fluid position-absolute bottom-0 p-5'>
+                <p>Call of Duty: Warzone was a free-to-play battle royale video game developed by Raven Software and Infinity Ward and published by Activision.</p>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+</div>
+{% endblock content %}
